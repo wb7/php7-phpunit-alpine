@@ -16,4 +16,5 @@ RUN wget https://phar.phpunit.de/phpunit-6.1.phar && \
     
 #install composer
 RUN apk add wget
-RUN chmod +x composer.sh && ./composer.sh
+ADD composer.sh /tmp/composer.sh
+RUN chmod +x /tmp/composer.sh && /tmp/composer.sh
