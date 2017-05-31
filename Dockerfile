@@ -16,4 +16,4 @@ RUN wget https://phar.phpunit.de/phpunit-6.1.phar && \
     
 #install composer
 RUN apt-get install -y wget
-RUN chmod +x && ./composer.sh
+RUN chmod +x composer.sh && ./composer.sh
