@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3
 MAINTAINER Lucas <lg@wb7.eu>
 
 # update and install
@@ -19,6 +19,5 @@ ADD composer.sh /tmp/composer.sh
 RUN chmod +x /tmp/composer.sh && /tmp/composer.sh
 
 # install phpunit
-RUN wget https://phar.phpunit.de/phpunit-6.1.phar && \
-    chmod +x phpunit-6.1.phar && \
-    mv phpunit-6.1.phar /usr/local/bin/phpunit
+RUN wget https://phar.phpunit.de/phpunit-9.phar -O /usr/local/bin/phpunit && \
+    chmod +x /usr/local/bin/phpunit
